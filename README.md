@@ -33,6 +33,8 @@ Add standard 60 second script to start on boot:
 sudo update-rc.d cctv.sh defaults
 ```
 
+This ensures that the stream has started up before crontab jumps in and starts checking and generally gets stuff on the screen as quick as possible.
+
 Edit /etc/crontab and add to end of file:
 
 ```
@@ -40,6 +42,29 @@ Edit /etc/crontab and add to end of file:
 */15 * * * * pi bash /etc/init.d/cctv15.sh
 ```
 
-to run cctv.sh every 1 minute and cctv15.sh every 15 minutes.
+to run `cctv.sh` every 1 minute and `cctv15.sh` every 15 minutes.
 
 Reboot!
+
+###Disabling Screensaver
+
+Successfully disables screensaver in XDE.
+
+Add the following to `/etc/X11/xorg.conf`:
+```
+Section "ServerFlags"
+        Option          "BlankTime"     "0"
+        Option          "StandbyTime"   "0"
+        Option          "SuspendTime"   "0"
+        Option          "OffTime"       "0"
+EndSection
+```
+
+And add the following to `/etc/xdg/lxsession/LXDE-pi/autostart`:
+```
+@xset s noblank
+@xset s off
+@xset -dpms
+```
+
+

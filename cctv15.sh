@@ -9,6 +9,6 @@ else
     echo "[15min] OMXPlayer not running. Restarting the stream!"
 fi
 
-omxplayer "rtsp://10.0.30.251:554/user=admin&password=admin&channel=1&stream=0.sdp?real_stream--rtp-caching=100" --live ;
+omxplayer "rtsp://10.0.30.251:554/user=admin&password=admin&channel=1&stream=0.sdp?real_stream--rtp-caching=100" --live --refresh ;
 
 
