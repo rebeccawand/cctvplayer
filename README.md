@@ -1,5 +1,7 @@
 #cctvPlayer
-Simple system for playing out a live RTSP feed full screen on a Raspberry Pi using OMXplayer
+Simple system for playing out a live RTSP feed full screen on a Raspberry Pi using OMXplayer.
+
+*Disclaimer: This code is a bit poo, don't judge me. It works well enough for its intended purpose.*
 
 ##Pi Setup
 
@@ -7,15 +9,15 @@ Run `sudo raspi-config`
 
 and set up the following:
 
--Enable as large a video split as possible.
--Disable overscan.
--Force HDMI hotplug (assuming you're intending to use HDMI).
--Boot to console, no auto login.
+- Enable as large a video split as possible.
+- Disable overscan.
+- Force HDMI hotplug (assuming you're intending to use HDMI).
+- Boot to console, no auto login.
 
 
 ##Installation
 
-Modify cctv.sh and cctv15.sh to your appropriate RTSP stream parameters.
+Modify `cctv.sh` and `cctv15.sh` to your appropriate RTSP stream parameters.
 
 Make scripts executable:
 
