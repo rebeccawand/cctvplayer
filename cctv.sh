@@ -2,10 +2,11 @@
 
 if pgrep "omxplayer" > /dev/null
 then
-    echo "[60sec] OMXPlayer running! Doing nothing."
+    echo "[60sec] At least one instance of OMXPlayer running! Doing nothing."
 else
-    echo "[60sec] OMXPlayer not running. Restarting the stream!"
-    omxplayer "rtsp://10.0.30.251:554/user=admin&password=admin&channel=1&stream=0.sdp?real_stream--rtp-caching=100" --live --refresh ;
+    echo "[60sec] No instances of OMXPlayer running. Restarting the stream!"
+    bash /etc/init.d/streams.sh
+
 fi
 
 
