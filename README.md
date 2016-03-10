@@ -44,7 +44,7 @@ sudo update-rc.d cctv.sh defaults
 
 This ensures that the stream has started up before crontab jumps in and starts checking and generally gets stuff on the screen as quick as possible.
 
-Edit /etc/crontab and add to end of file:
+Edit ``/etc/crontab` and add to end of file:
 
 ```
 * * * * * pi bash /etc/init.d/cctv.sh
