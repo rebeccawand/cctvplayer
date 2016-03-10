@@ -9,7 +9,7 @@ Run `sudo raspi-config`
 
 and set up the following:
 
-- Enable as large a video split as possible.
+- Enable as large a video split as possible (depends on model).
 - Disable overscan.
 - Force HDMI hotplug (assuming you're intending to use HDMI).
 - Boot to console, no auto login.
@@ -24,6 +24,7 @@ Make scripts executable:
 ```
 sudo chmod +x /etc/init.d/cctv.sh
 sudo chmod +x /etc/init.d/cctv15.sh
+sudo chmod +x /etc/init.d/streams.sh
 ```
 
 Add standard 60 second script to start on boot:
