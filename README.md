@@ -17,7 +17,7 @@ and set up the following:
 
 ##Installation
 
-Modify `cctv.sh` and `cctv15.sh` to your appropriate RTSP stream parameters.
+Modify `streams.sh` to your appropriate RTSP stream parameters.
 
 Make scripts executable:
 
