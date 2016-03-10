@@ -19,6 +19,14 @@ and set up the following:
 
 Modify `streams.sh` to your appropriate RTSP stream parameters.
 
+If you are using `screen` in the `streams.sh` file (for instance, to display multiple streams simultaneously), install it:
+
+```
+sudo apt-get update
+sudo apt-get install screen
+```
+
+
 Make scripts executable:
 
 ```
