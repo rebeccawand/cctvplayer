@@ -5,7 +5,7 @@ Simple system for playing out a live RTSP feed full screen on a Raspberry Pi usi
 
 ##Pi Setup
 
-Run `sudo raspi-config`
+Run `sudo raspi-config` or edit contig.txt using `sudo nano /boot/config.txt`
 
 and set up the following:
 
@@ -26,7 +26,13 @@ sudo apt-get update
 sudo apt-get install screen
 ```
 
+Create the scripts in or copy the scripts to the /etc/init.d folder:
 
+```
+sudo nano /etc/init.d/cctv.sh
+sudo nano /etc/init.d/cctv15.sh
+sudo nano /etc/init.d/streams.sh
+```
 Make scripts executable:
 
 ```
@@ -77,3 +83,4 @@ And add the following to `/etc/xdg/lxsession/LXDE-pi/autostart`:
 ```
 
 
+For fixing vertical lines add --avdict rtsp_transport:tcp to the omxplayer string!
